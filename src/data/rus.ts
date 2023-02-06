@@ -21,13 +21,12 @@ cv.education.push({
 })
 
 /**
- * const skiils = ['CSS/XHTML', 'PHP', 'JavaScript', 'VB.API', 'VB6',
+ * const skils = ['CSS/XHTML', 'PHP', 'JavaScript', 'VB.API', 'VB6',
  *  'VB.NET', 'C#', 'Java', 'Delphi', 'eScript', 'PLSQL', 'MS SQL', 'TFS', 'SVN', 'StarTeam', 'GIT']
  * */
 
 cv.expiriense.push({
     company: "ООО Волма",
-    website: "volma.ru",
     title: "Инженер-программист",
     startDt: new Date('2007-05-21'),
     endDt: new Date('2009-01-21'),
@@ -46,7 +45,6 @@ cv.expiriense.push({
 })
 cv.expiriense.push({
     company: "ООО Лукойл-Информ",
-    website: "lukoil-inform.ru",
     title: "Инженер-программист",
     startDt: new Date('2009-01-21'),
     endDt: new Date('2009-12-31'),
@@ -62,7 +60,6 @@ cv.expiriense.push({
 })
 cv.expiriense.push({
     company: "Softline",
-    website: "softline.ru",
     title: "Консультант",
     startDt: new Date('2010-01-21'),
     endDt: new Date('2011-08-10'),
@@ -93,7 +90,6 @@ cv.expiriense.push({
 })
 cv.expiriense.push({
     company: "Техносерв-консалтинг",
-    website: "tsconsulting.ru",
     title: "Ведущий разработчик Siebel CRM",
     startDt: new Date('2011-08-22'),
     endDt: new Date('2013-06-26'),
@@ -108,7 +104,6 @@ cv.expiriense.push({
 })
 cv.expiriense.push({
     company: "Сбербанк-Технологии",
-    website: "sberbank.ru",
     title: "Главный инженер",
     startDt: new Date('2013-07-01'),
     endDt: new Date('2014-03-19'),
@@ -124,7 +119,6 @@ cv.expiriense.push({
 })
 cv.expiriense.push({
     company: "ТРАСТ, Национальный банк",
-    website: "trust.ru",
     title: "Руководитель направления Siebel CRM",
     startDt: new Date('2014-03-19'),
     endDt: new Date('2014-04-17'),
@@ -135,7 +129,6 @@ cv.expiriense.push({
 })
 cv.expiriense.push({
     company: "Техносерв-консалтинг",
-    website: "tsconsulting.ru",
     title: "Архитектор Siebel CRM",
     startDt: new Date('2014-04-18'),
     endDt: new Date('2015-04-17'),
@@ -147,7 +140,6 @@ cv.expiriense.push({
 })
 cv.expiriense.push({
     company: "БинБанк",
-    website: "binbank.ru",
     title: "Главный Разрабочик Siebel CRM",
     startDt: new Date('2015-04-18'),
     endDt: new Date('2015-12-20'),
@@ -157,7 +149,6 @@ cv.expiriense.push({
 })
 cv.expiriense.push({
     company: "Сбербанк-Технологии",
-    website: "sberbank.ru",
     title: "Главный руководитель направления по развитию ИТ-систем",
     startDt: new Date('2015-12-21'),
     endDt: new Date('2018-05-22'),
@@ -175,7 +166,6 @@ cv.expiriense.push({
 })
 cv.expiriense.push({
     company: "Уралсиб",
-    website: "",
     title: "Архитектор ЕФС",
     startDt: new Date('2018-05-23'),
     endDt: new Date('2019-04-26'),
@@ -191,11 +181,10 @@ cv.expiriense.push({
     tags: [""]
 })
 cv.expiriense.push({
-    company: "",
-    website: "",
-    title: "Частная практика",
+    company: "Частная практика",
+    title: "",
     startDt: new Date('2019-04-26'),
-    endDt: new Date('2018-05-22'),
+    endDt: new Date('2020-08-30'),
     location: "Москва",
     description: "'Проектирование и разработка Единова рабочего окна оператора КЦ на базе Siebel CRM',\n" +
         "            'Проектирование и разработка жизненного цикла ипотечной заявки.',\n" +
@@ -205,10 +194,9 @@ cv.expiriense.push({
 })
 cv.expiriense.push({
     company: "Россельхозбанк",
-    website: "",
-    title: "Руководитель центра помпетенции систем CRM",
-    startDt: new Date('2018-05-23'),
-    endDt: new Date('2019-04-26'),
+    title: "Руководитель центра компетенции систем CRM",
+    startDt: new Date('2020-09-01'),
+    endDt: new Date('2022-10-30'),
     location: "Москва",
     description: "'Организация работы сотрудников центра компетенции',\n" +
         "            'Организация работы подрядчиков включая договорную работу.',\n" +
@@ -218,11 +206,10 @@ cv.expiriense.push({
 })
 cv.expiriense.push({
     company: "Солвит АМ",
-    website: "",
     title: "Технический директор",
     startDt: new Date('2023-01-09'),
     endDt: undefined,
-    location: "",
+    location: "Ереван",
     description: "",
     tags: [""]
 })

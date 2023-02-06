@@ -8,7 +8,7 @@ interface CompProps {
 
 const ExpComponent: React.FC<CompProps> = ({workItem}) => {
 
-    moment.locale('ru', {
+    moment.updateLocale('ru', {
         months: ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь']
     });
 
@@ -73,20 +73,20 @@ const ExpComponent: React.FC<CompProps> = ({workItem}) => {
     }
 
     return (
-        <div className="workItem">
-            <h3>{`${dateFormat(workItem.startDt)} - ${dateFormat(workItem.endDt)}`}</h3>
-            <h3>{dateDiff(workItem.startDt, workItem.endDt)}</h3>
-            <div>
-                <div>{workItem.title}</div>
-                {workItem.website ?
-                    <div><a href={workItem.website} target="_blank">{workItem.company}</a></div>
+        <>
+            <div className="workPlace">
+                <div className="workEmployer">{workItem.company} ({workItem.location})</div>
+                {workItem.title ?
+                    <div className="workJobTitle">{workItem.title}</div>
                     :
-                    <div>{workItem.company}</div>
+                    <></>
                 }
-                <div>{workItem.location}</div>
-                <div>{workItem.description}</div>
+                <div className="workDuration">{`${dateFormat(workItem.startDt)} - ${dateFormat(workItem.endDt)}`}
+                    ({dateDiff(workItem.startDt, workItem.endDt)})
+                </div>
+                <div className="workDescription">{workItem.description}</div>
             </div>
-        </div>
+        </>
     );
 };
 

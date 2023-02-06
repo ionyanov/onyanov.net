@@ -3,7 +3,7 @@ type Education = {
     institution: string;
     location: string;
     startDt: Date;
-    endDt?: Date;
+    endDt: Date;
     description: string;
 }
 

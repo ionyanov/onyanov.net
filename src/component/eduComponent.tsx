@@ -8,12 +8,10 @@ interface CompProps {
 const EduComponent: React.FC<CompProps> = ({eduItem}) => {
     return (
         <div className="eduItem">
-            <h3>{eduItem.startDt.getFullYear()} - {eduItem.endDt?.getFullYear()}</h3>
-            <div>
-                <div>{eduItem.institution}</div>
-                <div>{eduItem.location}</div>
-                <div>{eduItem.degree}</div>
-                <div>{eduItem.description}</div>
+            <div className="eduPlace">
+                <div className="eduInstitute">{eduItem.institution} ({eduItem.location})</div>
+                <div className="eduDate">{eduItem.startDt.getFullYear()} - {eduItem.endDt?.getFullYear()}</div>
+                <div className="eduDescription">{eduItem.description}</div>
             </div>
         </div>
     );

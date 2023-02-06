@@ -1,18 +1,19 @@
-import React, {useState} from 'react';
-import {BrowserRouter, NavLink, Route, Routes} from 'react-router-dom';
-import cv from './data/rus'
-import CV from './model/resume';
-import Main from './pages/main';
+import React from 'react';
+import {BrowserRouter, Navigate, Route, Routes} from 'react-router-dom';
+import NavArray from "./model/navigateLink";
+import NavComponent from "./component/navComponent";
 
 function App() {
-    const [currentCV, setCV] = useState<CV>(cv);
     const reload = () => window.location.reload();
-
     return (
         <>
             <BrowserRouter>
+                <NavComponent></NavComponent>
                 <Routes>
-                    <Route path='/' element={<Main currentCV={currentCV}/>}></Route>
+                    {NavArray.map(route =>
+                        <Route key={route.path} path={route.path} element={route.component}></Route>
+                    )}
+                    <Route path="*" element={<Navigate to="/"/>}/>
                 </Routes>
             </BrowserRouter>
         </>

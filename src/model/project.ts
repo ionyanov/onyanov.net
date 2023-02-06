@@ -3,6 +3,7 @@ type Project = {
     date: string;
     source: string;
     link: string;
+    description: string;
 }
 
 export default Project;

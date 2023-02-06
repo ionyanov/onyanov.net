@@ -1,0 +1,151 @@
+.app {
+    text-align: center;
+    margin: 10px;
+    max-width: 828px;
+    width: 100%;
+}
+
+.cvTitle {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 5px;
+}
+
+.nameTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.fullName {
+    font-size: 28px;
+    line-height: 30px;
+    color: #315a60;
+    clear: both;
+}
+.jobTitle {
+    clear: both;
+    font-size: 20px;
+    line-height: 24px;
+    color: #315a60;
+}
+.address {
+    clear: both;
+    font-size: 14px;
+    line-height: 16px;
+    color: #315a60;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 5px;
+    width: 270px;
+    font-size: 14px;
+}
+.contactRow {
+    display: flex;
+    flex-direction: row;
+}
+.contactTitle {
+    width: 100px;
+    display: flex;
+    font-weight: bold;
+    justify-content: right;
+    margin-right: 10px;
+}
+.contactValue {
+     display: flex;
+    justify-content: left;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    width: 100%;
+    max-width: 850px;
+    border: 3px solid #1c363a;
+}
+.contentRow {
+    display: flex;
+    flex-direction: row;
+}
+.contentCol {
+    max-width: 760px;
+    padding: 10px;
+}
+
+.colHead {
+    flex: 1 270px;
+    font-size: 36px;
+    line-height: 40px;
+    clear: both;
+    color: #709399;
+    background-color: #1c363a;
+}
+.colBody {
+    flex: 1 530px;
+    clear: both;
+}
+
+.workPlace {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.workEmployer {
+    font-weight: bold;
+    font-size: 14px;
+    color: #315a60;
+}
+.workJobTitle {
+    font-weight: bold;
+    font-size: 14px;
+    color: #315a60;
+ }
+.workDuration {
+    font-size: 13px;
+    color: #709399;
+}
+.workDescription {
+    text-align: justify;
+    font-size: 13px;
+    color: #315a60;
+}
+
+.eduPlace {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.eduInstitute {
+    font-weight: bold;
+    font-size: 14px;
+    color: #315a60;
+}
+.eduDate {
+    font-size: 13px;
+    color: #315a60;
+}
+.eduDescription {
+    font-weight: bold;
+    font-size: 13px;
+    color: #315a60;
+}
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="cvTitle"] {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    [class*="contentRow"] {
+        display: block;
+    }
+}
