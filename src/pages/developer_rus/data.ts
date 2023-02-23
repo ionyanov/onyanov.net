@@ -32,7 +32,7 @@ dev_rus.expiriense.push({
         "Разрабатывал подсистему поддержки пользователей, встроенную в систему,",
         "подсистему управления правами пользователей и подсистему отчетсноти (динамическое генерирование SQL).",
         "Разрабатывал интеграция с MS Office, 1C. Работал с SVN и SourceSafe."],
-    tags: ["MS SQL", "C#", "VB6", "VB.NET", "SVN", "VBA", ".NET 2.0", ".NET 3.5"]
+    tags: ["MS SQL", "C#", "VB6", ".NET"]
 })
 dev_rus.expiriense.push({
     company: "ООО Лукойл-Информ",
@@ -46,7 +46,7 @@ dev_rus.expiriense.push({
         "Разрабатывал вспомогательное программное обеспечения на платформе .NET 2.0.",
         "Разрабатывал отчеты на шаблонах CristalReport и MS Report.",
         "Разворачивал и администрировал SVN-сервера, TFS, StarTeam."],
-    tags: ["MS SQL", "Oracle", "C#", "Dephi", "SVN", "VBA", "CristalReport", "MS Report"]
+    tags: ["MS SQL", "Oracle", "C#", "Dephi"]
 })
 dev_rus.expiriense.push({
     company: "Softline",
@@ -96,7 +96,7 @@ dev_rus.expiriense.push({
         "Писал ETL процессы на PL/SQL.",
         "Настраивал репозиторий и шаблоны отчетов в BI Answers.",
         "Сопровождал существующее решение (исправление ошибок, консультирование пользователей)."],
-    tags: ["Oracle", "Oracle BI", "PL/SQL"]
+    tags: ["Oracle", "Oracle BI", "ETL"]
 })
 dev_rus.expiriense.push({
     company: "Техносерв-консалтинг",

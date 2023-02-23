@@ -7,7 +7,7 @@ interface FilterProps {
 }
 
 const FilterComponent: FC<FilterProps> = (props) => {
-    let {sortOrder, toggleSort, selectedTags, selectTag} = useFilter()
+    let {sortOrder, toggleSort} = useFilter()
 
     return (
         <div className="controls">

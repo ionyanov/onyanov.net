@@ -13,15 +13,6 @@ import ProjComponent from "../../component/projComponent";
 
 const DeveloperRus: React.FC = React.forwardRef((props, ref) => {
         let [expiriense, setExpiriense] = useState<Expiriense[]>([]);
-        const [showProject, setShowProject] = useState(false)
-
-        useEffect(() => {
-            const searchParams = new URLSearchParams(document.location.search)
-            if (searchParams.get('proj')) {
-                setShowProject(true)
-            }
-        }, [])
-
         let {sortOrder, selectedTags} = useFilter()
 
         useEffect(() => {
@@ -85,15 +76,13 @@ const DeveloperRus: React.FC = React.forwardRef((props, ref) => {
                             <EduComponent key={index} eduItem={item}/>
                         )}</div>
                     </div>
-                    {showProject &&
-                        <div className="contentRow">
-                            <div className="contentCol colHead"><h2 className="colHead">Проекты</h2></div>
-                            <div className="contentCol colBody">{currentCV.projects.filter(itm => itm.link)
-                                .map((item, index) =>
-                                    <ProjComponent key={index} projItem={item}/>
-                                )}</div>
-                        </div>
-                    }
+                    <div className="contentRow">
+                        <div className="contentCol colHead"><h2 className="colHead">Проекты</h2></div>
+                        <div className="contentCol colBody">{currentCV.projects.filter(itm => itm.link)
+                            .map((item, index) =>
+                                <ProjComponent key={index} projItem={item}/>
+                            )}</div>
+                    </div>
                 </div>
             </div>
         )
