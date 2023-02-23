@@ -1,76 +1,22 @@
 import React from 'react';
 import Expiriense from "../model/expiriense";
-import moment from "moment"
+import dateFormat, {DATE_DETAIL_FORMAT} from "../helpers/dateFormat";
+import dateDiff, {DATEDIFF_FORMAN} from "../helpers/dateDiff";
+import TagComponent from "./tagComponent";
+
+export enum DATE_FORMAT {
+    SHOTR,
+    FULL
+}
 
 interface CompProps {
     workItem: Expiriense;
+    format?: DATE_FORMAT
 }
 
-const ExpComponent: React.FC<CompProps> = ({workItem}) => {
-
-    moment.updateLocale('ru', {
-        months: ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь']
-    });
-
-    const dateDiff = (dateStart?: Date, dateEnd?: Date) => {
-        let date1 = moment(dateStart);
-        let date2 = moment(dateEnd);
-        let diff = moment(date2.diff(date1), true);
-        diff.add(-1970, 'years');
-        diff.add(1, 'months');
-        let year = diff.year()
-        let month = diff.month();
-
-        let yearName: string;
-        let monthName: string;
-        switch (year) {
-            case 0:
-                yearName = "";
-                break;
-            case 1:
-            case 21:
-            case 31:
-                yearName = year + " год";
-                break;
-            case 2:
-            case 3:
-            case 4:
-            case 22:
-            case 23:
-            case 24:
-            case 32:
-            case 33:
-            case 34:
-                yearName = year + " года";
-                break;
-            default:
-                yearName = year + " лет";
-                break;
-        }
-        switch (month) {
-            case 0:
-                monthName = "";
-                break;
-            case 1:
-                monthName = "1 месяц";
-                break;
-            case 2:
-            case 3:
-            case 4:
-                monthName = month + " месяца";
-                break;
-            default:
-                monthName = month + " месяцев";
-                break;
-        }
-        return yearName + ' ' + monthName;
-    }
-    const dateFormat = (dateIn?: Date) => {
-        if (!dateIn) return "";
-        let result = moment(dateIn);
-        result.locale('ru')
-        return result.format('MMMM YYYY');
-    }
+const ExpComponent: React.FC<CompProps> = ({workItem, format = DATE_FORMAT.FULL}) => {
+    const dtFormat: DATE_DETAIL_FORMAT = format === DATE_FORMAT.FULL ? DATE_DETAIL_FORMAT.MONTH : DATE_DETAIL_FORMAT.YEAR;
+    const dfFormat: DATEDIFF_FORMAN = format === DATE_FORMAT.FULL ? DATEDIFF_FORMAN.WITH_MONTH : DATEDIFF_FORMAN.ONLY_YEAR;
 
     return (
         <>
@@ -81,10 +27,19 @@ const ExpComponent: React.FC<CompProps> = ({workItem}) => {
                     :
                     <></>
                 }
-                <div className="workDuration">{`${dateFormat(workItem.startDt)} - ${dateFormat(workItem.endDt)}`}
-                    ({dateDiff(workItem.startDt, workItem.endDt)})
+                <div className="workDuration">
+                    {dateFormat(workItem.startDt, dtFormat)}
+                    {workItem.endDt ?
+                        ' - ' + dateFormat(workItem.endDt, dtFormat) + ' '
+                        : ' - настоящее время '
+                    }
+                    ({dateDiff(workItem.startDt, workItem.endDt, dfFormat)})
                 </div>
-                <div className="workDescription">{workItem.description}</div>
+                <div className="workDescription">{workItem.description.join(' ')}</div>
+                <div className="workTags">{workItem.tags.map(item =>
+                    <TagComponent key={item} tag={item}/>
+                )}</div>
+
             </div>
         </>
     );

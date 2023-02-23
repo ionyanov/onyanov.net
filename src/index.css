@@ -15,7 +15,6 @@ body {
 
 #root {
     display: flex;
-    font-family: Roboto-Regular;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -40,8 +39,8 @@ nav {
     text-align: center;
 }
 
-.navbar a:hover {
-    color: darkgreen !important;;
+.navigate:hover {
+    color: darkgreen !important;
     text-decoration: underline;
 }
 

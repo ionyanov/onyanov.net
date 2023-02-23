@@ -1,5 +1,5 @@
 import React from "react";
-import Main from "../pages/dev_rus/main";
+import {DeveloperEng, DeveloperRus, FullRus} from "../pages";
 
 type NavigateLink = {
     path: string;
@@ -10,9 +10,9 @@ type NavigateLink = {
 let NavArray: NavigateLink[];
 
 NavArray = [
-    {path: '/', title: 'Русский', component: <Main/> },
-    {path: '/enu', title: 'English', component: <Main/> },
-    {path: '/port', title: 'Portugalski', component: <Main/> }
+    {path: '/', title: 'Русский(разработчик)', component: <DeveloperRus/>},
+    {path: '/full', title: 'Русский(полный)', component: <FullRus/>},
+    {path: '/enu', title: 'English', component: <DeveloperEng/>}
 ];
 
 export default NavArray;

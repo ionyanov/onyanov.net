@@ -29,6 +29,12 @@ class CV {
     public education: Education[] = [];
     public expiriense: Expiriense[] = [];
     public projects: Project[] = [];
+
+    get tags(): string [] {
+        let _tags: string[] = []
+        this.expiriense.map(item => _tags = [...new Set([..._tags, ...item.tags])]);
+        return _tags.filter(Boolean).sort();
+    }
 }
 
 export default CV;

@@ -1,0 +1,245 @@
+.app {
+    text-align: center;
+    margin: 10px;
+    max-width: 828px;
+    width: 100%;
+    --bg-color-darc: #315a60;
+    --bg-color-light: buttonface;
+    --font-darc: #315a60;
+    --font-light: #709399;
+    --font-alert: #ee6262;
+}
+
+.printButton {
+    cursor: pointer;
+    float: right;
+    padding-top: 10px;
+}
+
+.filter {
+    width: 100%;
+    text-decoration: none;
+    color: var(--font-darc);
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--bg-color-light);
+}
+
+.tag {
+    text-decoration: none;
+    color: var(--font-darc);
+    text-align: center;
+    margin: 3px;
+    padding: 2px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--bg-color-light);
+}
+
+.selected {
+    font-weight: bold;
+    color: var(--font-alert);
+}
+
+.cvTitle {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 5px;
+}
+
+.nameTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.fullName {
+    font-size: 28px;
+    line-height: 30px;
+    color: var(--font-darc);
+    clear: both;
+}
+
+.jobTitle {
+    clear: both;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--font-light);
+}
+
+.address {
+    clear: both;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--font-darc);
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 5px;
+    width: 270px;
+    font-size: 14px;
+}
+
+.contactRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.contactTitle {
+    width: 100px;
+    display: flex;
+    font-weight: bold;
+    justify-content: right;
+    margin-right: 10px;
+}
+
+.contactValue {
+    display: flex;
+    justify-content: left;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 850px;
+    border: 3px solid var(--bg-color-darc);
+}
+
+.contentRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.contentCol {
+    max-width: 760px;
+    padding: 10px;
+}
+
+.colHead {
+    flex: 1 270px;
+    font-size: 36px;
+    line-height: 40px;
+    clear: both;
+    color: var(--font-light);
+    background-color: var(--bg-color-darc);
+}
+
+.colBody {
+    flex: 1 530px;
+    clear: both;
+}
+
+.workPlace {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.workEmployer {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--font-darc);
+}
+
+.workJobTitle {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--font-darc);
+}
+
+.workDuration {
+    font-size: 12px;
+    color: var(--font-darc);
+}
+
+.workDescription {
+    text-align: justify;
+    font-size: 13px;
+    color: var(--font-darc);
+}
+
+.eduPlace {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.eduInstitute {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--font-darc);
+}
+
+.eduDate {
+    font-size: 13px;
+    color: var(--font-darc);
+}
+
+.eduDescription {
+    font-weight: bold;
+    font-size: 13px;
+    color: var(--font-darc);
+}
+
+.projItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.projName {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--font-darc);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.projLink {
+    font-weight: normal;
+    font-size: 13px;
+    color: var(--font-darc);
+}
+
+.projSource {
+    font-size: 13px;
+    color: var(--font-darc);
+}
+
+.projDescription {
+    text-align: justify;
+    font-size: 13px;
+    color: var(--font-darc);
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="cvTitle"] {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    [class*="contentRow"] {
+        display: block;
+    }
+
+    .printButton { display: none;}
+
+}
+
+@media print {
+    nav { display: none;}
+    .controls { display: none;}
+    .printButton { display: none;}
+}

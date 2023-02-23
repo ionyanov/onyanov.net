@@ -4,8 +4,8 @@ type Expiriense = {
     endDt?: Date;
     company: string;
     location: string;
-    description: string;
-    tags: [string];
+    description: string[];
+    tags: string[];
 }
 
 export default Expiriense;
