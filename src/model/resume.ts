@@ -14,7 +14,7 @@ class CV {
     public photo?: string;
     public dateOfBirth?: Date;
     public jobTitle?: string;
-    public description?: string;
+    public description?: string[];
     public contactInfo: {
         phone?: string;
         email?: string;

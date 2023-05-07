@@ -1,17 +1,16 @@
 import React, {useEffect, useState} from 'react';
-import "./DeveloperRus.css"
+import {Link} from "react-router-dom";
+import currentCV from "./data";
 import ExpComponent, {DATE_FORMAT} from "../../component/expComponent";
 import EduComponent from "../../component/eduComponent";
 import Expiriense from "../../model/expiriense";
-import currentCV from "./data";
 import {useFilter} from "../../helpers/filterData";
 import FilterComponent from "../../component/filterComponent";
-import PrintComponent from "../../component/printComponent";
-import {Link} from "react-router-dom";
 import {ContactInformationItem} from "../../component/ContactInformationItem";
 import ProjComponent from "../../component/projComponent";
+import BtnComponent from "../../component/btnComponent";
 
-const DeveloperRus: React.FC = React.forwardRef((props, ref) => {
+const DeveloperRus: React.FC = React.forwardRef(() => {
         let [expiriense, setExpiriense] = useState<Expiriense[]>([]);
         let {sortOrder, selectedTags} = useFilter()
 
@@ -30,7 +29,7 @@ const DeveloperRus: React.FC = React.forwardRef((props, ref) => {
 
         return (
             <div id="app" className="app">
-                <PrintComponent/>
+                <BtnComponent/>
                 <div className="cvTitle">
                     <div className="contactInfo">
                         <ContactInformationItem style='contactPhone'
@@ -45,29 +44,33 @@ const DeveloperRus: React.FC = React.forwardRef((props, ref) => {
                             ''
                             :
                             <Link to={currentCV.contactInfo.linkedIn || ''}
-                                  target='_blank'>LinkedIn</Link>
+                                  target='_blank'>профиль</Link>
                         }
                         </ContactInformationItem>
                         <ContactInformationItem style='contactWeb'
                                                 title='Web'
                         >{currentCV.contactInfo.website}</ContactInformationItem>
+                        <ContactInformationItem style='contactAddress'
+                                                title='Адрес'
+                        >{currentCV.contactInfo.address}</ContactInformationItem>
                     </div>
                     <div className="nameTitle">
                         <h1 className="fullName">{currentCV.fullName}</h1>
                         <h2 className="jobTitle">{currentCV.jobTitle}</h2>
-                        <h3 className="address">{currentCV.contactInfo.address}</h3>
                     </div>
+                </div>
+                <div className="descriptionHolder">
+                    {currentCV.description?.map(line => <p className="description">{line}</p>)}
                 </div>
                 <div className="content">
                     <div className="contentRow">
-                        <div className="contentCol colHead">
-                            <h2 className="colHead">Опыт работы</h2>
+                        <div className="contentCol colHead"><h2 className="colHead">Опыт работы</h2>
                             <FilterComponent tags={currentCV.tags}/>
                         </div>
                         <div className="contentCol colBody">{expiriense.sort((a: Expiriense, b: Expiriense) =>
                             (a.startDt < b.startDt) ? sortOrder * 1 : ((a.startDt > b.startDt) ? sortOrder * -1 : 0)
                         ).map((item, index) =>
-                            <ExpComponent key={index} workItem={item} format={DATE_FORMAT.SHOTR}/>
+                            <ExpComponent key={index} workItem={item} format={DATE_FORMAT.SHORT}/>
                         )}</div>
                     </div>
                     <div className="contentRow">
@@ -75,6 +78,16 @@ const DeveloperRus: React.FC = React.forwardRef((props, ref) => {
                         <div className="contentCol colBody">{currentCV.education.map((item, index) =>
                             <EduComponent key={index} eduItem={item}/>
                         )}</div>
+                    </div>
+                    <div className="contentRow">
+                        <div className="contentCol colHead"><h2 className="colHead">Языки</h2></div>
+                        <div className="contentCol colBody">
+                            {currentCV.languages.map((item) => (
+                                <p className="description" key={item.name}>
+                                    <b>{item.name}({item.level})</b>
+                                </p>
+                            ))}
+                        </div>
                     </div>
                     <div className="contentRow">
                         <div className="contentCol colHead"><h2 className="colHead">Проекты</h2></div>

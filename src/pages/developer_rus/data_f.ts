@@ -11,7 +11,7 @@ full_rus.contactInfo.phone = "968 813 49 22";
 full_rus.contactInfo.linkedIn = "linkedIn";
 full_rus.contactInfo.address = "Армения, Ереван";
 full_rus.contactInfo.website = "www.onyanov.net";
-full_rus.description = "description";
+full_rus.description = ["description"];
 full_rus.photo = "photo";
 
 full_rus.education.push({
@@ -196,53 +196,69 @@ full_rus.languages.push({name: "Английский", level: "читаю про
 
 full_rus.projects.push({
     name: "Сайт-визитка на PHP",
-    source: "https://github.com/ionyanov/onyanov.net/tree/php",
+    source: "https://github.com/ionyanov/php_onyanov.net",
     link: "http://onyanov.net/php/",
-    description: "Личная старница на PHP. Был взят шаблон из открытых источников на статичном HTML" +
-        " и доработан для возможности наполнения данными из структцры данных",
+    description: ["Личная старница на PHP. Был взят шаблон из открытых источников на статичном HTML и доработан для возможности наполнения данными из структцры данных"],
 })
 full_rus.projects.push({
-    name: "Панель задач",
+    name: "Личный сайт Сергея Агасарян",
+    source: "https://github.com/ionyanov/php_serguius.ru.git",
+    link: "http://onyanov.net/serguius",
+    description: ["Разработан в 2004 на статичном HTML, Позднее переписан на PHP с использованием готовых библиотек class.phpSecurityAdmin и class.phpMysqlConnection.",
+        "База данных на MySQL.",
+        "Дизайн предоставлен заказчиком.",
+        "За 2005-2010 года я разработал 30 разных сайтов c аналогичной архитектурой."],
+})
+full_rus.projects.push({
+    name: "Учебный проект: Панель задач",
     source: "https://github.com/ionyanov/oin-todo-desc",
-    link: "http://kanban.onyanov.net/",
-    description: "Простейщая KANBAN доска. В обычном режиме сохряняет данные в loсalStorage. " +
-        "После авторизации работа идет с данными на сервер (Node.JS + MySQL). Обращение через axios.",
+    link: "http://onyanov.net/kanban",
+    description: ["Простейщая KANBAN доска. В обычном режиме сохряняет данные в loсalStorage. После авторизации работа идет с данными на сервер.",
+        "Frontend: React 18.2 + axios + mobx + bootstrap",
+        "Backend: Node.js + express + nodemon"],
 })
 full_rus.projects.push({
-    name: "Сайт-визитка на React",
+    name: "Текущий сайт",
     source: "https://github.com/ionyanov/onyanov.net",
     link: "http://onyanov.net/",
-    description: "Текущий сайт",
+    description: ["React + Typescript"],
 })
 full_rus.projects.push({
-    name: "Учетный проект на React",
+    name: "Учебный проект: Каталог статей",
     source: "https://github.com/ionyanov/reactstudyproject",
-    link: "",
-    description: "Портал, созданный по курсу Улюби Тимура (https://ulbitv.ru/)",
+    link: "http://onyanov.net/reactstudyproject",
+    description: ["Портал, созданный по курсу Улюби Тимура (https://ulbitv.ru/)",
+        "С нуля настроен Webpack и Vite, Typescript, Babel, SCSS, eslint + prettier, jest, axios, Redux + RTK, storybook + loki, Cypress.",
+        "Архитектура: Feature sliced design (https://feature-sliced.design/docs/get-started/tutorial)",
+        "Разработана библиотека компанент (модальные окна с порталами, выпадающие списки\\меню, сайдбар, " +
+        "кнопки с разными темами, скелетоны, попапы, ленивые изображения, drawer, вертикальные и горизонтальные стеки и т.д.)",
+        "Множество асинхронных компанентов и lazy загрузок. Инъекция эндпоинтов. Throttle и debounce",
+        "Весь проект описан в Storybook (изначально v6 с миграцией на v7). Скриншотное тестированние с помощью Loki",
+        "Проект покрыт юнит тестами (jest + React Testing Library). Для E2E-тестирования подключен Cypress.",
+        "Для всех тестов настроены визуальные ответы.",
+        "Маршрутизация настроена с помощью React-router-dom V6 с проверкой доступа по ролям. ",
+        "Настроен i18n.",
+        "GitHub pre-commit хуки и аналогичные проверки с помощью Husky",
+        "Backend: json-server"],
 })
 full_rus.projects.push({
-    name: "Гениалогического дерево",
-    source: "",
-    link: "",
-    description: "Сайт гениалогического дерева моей семьи",
-})
-full_rus.projects.push({
-    name: "Сайт - галерея на PHP",
-    source: "",
-    link: "http://serguius.onyanov.net/",
-    description: "Личный сайт Сергея Агасарян на PHP c бд MySQL",
+    name: "Интернет магазин косплея на React",
+    source: "https://github.com/ionyanov/neocosplayshop",
+    link: "http://onyanov.net/neocosplayshop",
+    description: ["Интернет магазин париков, костюмов и атрибутики для косплея на React + Node.JS c бд MySQL"],
 })
 full_rus.projects.push({
     name: "Сайт - галерея на React",
     source: "",
     link: "",
-    description: "Личный сайт Сергея Агасарян на React + Node.JS c бд MySQL",
+    description: ["Личный сайт Сергея Агасарян на React + Node.JS c бд MySQL"],
 })
 full_rus.projects.push({
-    name: "Интернет магазин косплея на React",
+    name: "Гениалогического дерево",
     source: "",
     link: "",
-    description: "Интернет магазин париков, костюмов и атрибутики для косплея на React + Node.JS c бд MySQL",
+    description: ["Сайт гениалогического дерева моей семьи"],
 })
+
 
 export default full_rus;

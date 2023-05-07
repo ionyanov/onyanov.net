@@ -7,11 +7,17 @@ data.lastName = "Onyanov";
 data.dateOfBirth = new Date('1986-04-16');
 data.jobTitle = "Fullstack developer";
 data.contactInfo.email = "onyanov@gmail.com";
-data.contactInfo.phone = "968 813 49 22";
+data.contactInfo.phone = "";
 data.contactInfo.linkedIn = "https://www.linkedin.com/in/ilya-onyanov-b81561178/";
 data.contactInfo.address = "Armenia, Yerevan";
 data.contactInfo.website = "www.onyanov.net";
-data.description = "description";
+data.description = ["Имею большой опыт разработки на различных языках по методологиям Waterfall и Agile (KANBAN и SCRUM).",
+    "Работал в маленьких (1-3 человека) и больших(~300 человек) командах в различных ролях: " +
+    "3-я линия сопровождения, аналитик, разработчик, руководитель разработки, руководитель проекта.",
+    "Длительное время руководил командами разработки и отделом при доработке Siebel CRM.",
+    "В настоящее время решил сменить направление деятельности и заняться FullStack разработкой.",
+    "Для смены специальности реализовал несколько pet-проектов. Для систематизации знаний и расширения кругозора прошел дополнительное обучение.",
+    "В работе предпочитаю клиентоориентированный подход: стараюсь выявить требуемый процесс и ожидаемый результат."];
 data.photo = "photo";
 
 data.education.push({
@@ -31,7 +37,7 @@ data.expiriense.push({
         "Was third-line support. Wrote user instructions.",
         "I developed local support system, integrated in main solution,",
         "access system and report system (dynamic SQL)."],
-    tags: ["MS SQL", "C#", "VB6", "VB.NET", "SVN", "VBA", ".NET 2.0", ".NET 3.5"]
+    tags: ["MS SQL", "C#", "VB6", ".NET"]
 })
 data.expiriense.push({
     company: "Lukoil-Inform",
@@ -44,7 +50,7 @@ data.expiriense.push({
         "Wrote user instructions.",
         "Develop additional programs on .NET 2.0.",
         "Developed report in CristalReport and MS Report."],
-    tags: ["MS SQL", "Oracle", "C#", "Dephi", "SVN", "VBA", "CristalReport", "MS Report"]
+    tags: ["MS SQL", "Oracle", "C#", "Dephi"]
 })
 data.expiriense.push({
     company: "Softline",
@@ -86,7 +92,7 @@ data.expiriense.push({
         "Designed DB and developed ETL with PL/SQL.",
         "Created report with BI Answers.",
         "Third-line support."],
-    tags: ["Oracle", "Oracle BI", "PL/SQL"]
+    tags: ["Oracle", "Oracle BI", "ETL"]
 })
 data.expiriense.push({
     company: "Technoserv-Consulting",
@@ -154,9 +160,9 @@ data.expiriense.push({
     tags: ["Oracle", "Siebel CRM"]
 })
 data.expiriense.push({
-    company: "Солвит АМ",
-    title: "Технический директор",
-    startDt: new Date('2023-01-09'),
+    company: "Solvit.AM",
+    title: "Fullstack Developer",
+    startDt: new Date('2022-11-01'),
     endDt: undefined,
     location: "Yerevan",
     description: [],
@@ -164,57 +170,54 @@ data.expiriense.push({
 })
 
 data.languages.push({name: "Russian", level: "Native"});
-data.languages.push({name: "English", level: "B2"});
+data.languages.push({name: "English", level: "B1"});
 
 data.projects.push({
-    name: "Сайт-визитка на PHP",
-    source: "https://github.com/ionyanov/onyanov.net/tree/php",
+    name: "Personal site Sergey Agasaryan",
+    source: "https://github.com/ionyanov/php_serguius.ru.git",
+    link: "http://onyanov.net/serguius",
+    description: ["Developed in 2004 on static HTML, later rewritten in PHP using class.phpSecurityAdmin and class.phpMysqlConnection libraries.",
+        "Database: MySQL.",
+        "Design by customer.",
+        "I developed about 30 different sites with a similar architecture during 2005-2010."],
+})
+data.projects.push({
+    name: "Personal site on PHP",
+    source: "https://github.com/ionyanov/php_onyanov.net",
     link: "http://onyanov.net/php/",
-    description: "Личная старница на PHP. Был взят шаблон из открытых источников на статичном HTML" +
-        " и доработан для возможности наполнения данными из структцры данных",
+    description: ["Personal page in PHP. A template was taken from open sources on static HTML and modified to be able to fill with data from the data structure"],
 })
 data.projects.push({
-    name: "Панель задач",
+    name: "Study Project: TODO board",
     source: "https://github.com/ionyanov/oin-todo-desc",
-    link: "http://kanban.onyanov.net/",
-    description: "Простейщая KANBAN доска. В обычном режиме сохряняет данные в loсalStorage. " +
-        "После авторизации работа идет с данными на сервер (Node.JS + MySQL). Обращение через axios.",
+    link: "http://onyanov.net/kanban",
+    description: ["A simple KANBAN board. In common mode it saves data in localStorage. After authorization it can works with the server.",
+        "Frontend: React 18.2 + axios + mobx + BOOTSTRAP + JWT",
+        "Backend: Node.js + express + nodemon"],
 })
 data.projects.push({
-    name: "Сайт-визитка на React",
+    name: "Current site",
     source: "https://github.com/ionyanov/onyanov.net",
     link: "http://onyanov.net/",
-    description: "Текущий сайт",
+    description: ["React + Typescript"],
 })
 data.projects.push({
-    name: "Учетный проект на React",
+    name: "Study Project: Catalog of articles",
     source: "https://github.com/ionyanov/reactstudyproject",
-    link: "",
-    description: "Портал, созданный по курсу Улюби Тимура (https://ulbitv.ru/)",
-})
-data.projects.push({
-    name: "Гениалогического дерево",
-    source: "",
-    link: "",
-    description: "Сайт гениалогического дерева моей семьи",
-})
-data.projects.push({
-    name: "Сайт - галерея на PHP",
-    source: "",
-    link: "http://serguius.onyanov.net/",
-    description: "Личный сайт Сергея Агасарян на PHP c бд MySQL",
-})
-data.projects.push({
-    name: "Сайт - галерея на React",
-    source: "",
-    link: "",
-    description: "Личный сайт Сергея Агасарян на React + Node.JS c бд MySQL",
-})
-data.projects.push({
-    name: "Интернет магазин косплея на React",
-    source: "",
-    link: "",
-    description: "Интернет магазин париков, костюмов и атрибутики для косплея на React + Node.JS c бд MySQL",
+    link: "http://onyanov.net/reactstudyproject",
+    description: ["Portal created in course of Ulbi Timur (https://ulbitv.ru/)",
+        "Webpack и Vite, Typescript, Babel, SCSS, eslint + prettier, jest, axios, Redux + RTK, storybook + loki, Cypress configured by manuals.",
+        "Architecture: Feature sliced design (https://feature-sliced.design/docs/get-started/tutorial)",
+        "Was developed components library: modals and portals, drop-down lists / menus, " +
+        "buttons with different themes, skeletons, pop-ups, lazy images, drawer, vertical and horizontal stacks, etc.)",
+        "Lots of asynchronous components and lazy downloads. Endpoint injection. Throttle and debounce.",
+        "The whole project is described in the Storybook (v6 and migration to v7). Screenshot testing with Loki",
+        "The project is covered with unit tests (jest + React Testing Library). For E2E testing using Cypress.",
+        "Visual report for all tests.",
+        "For Routing use React-router-dom V6 with role-based access checking.",
+        "Setup i18n.",
+        "GitHub pre-commit hooks and similar checks with Husky",
+        "Backend: json-server"]
 })
 
 export default data;

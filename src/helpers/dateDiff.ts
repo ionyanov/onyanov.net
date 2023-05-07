@@ -1,22 +1,12 @@
 import moment from "moment/moment";
 
-export enum DATEDIFF_FORMAN {
+export enum DATEDIFF_FORMAT {
     WITH_MONTH,
     ONLY_YEAR
 }
 
-function dateByMonthRU(dateStart: Date, dateEnd: Date): string {
-    let date1 = moment(dateStart);
-    let date2 = moment(dateEnd);
-
-    let diff = moment(date2.diff(date1), true);
-    diff.add(-1970, 'years');
-    diff.add(1, 'months');
-    let year = diff.year()
-    let month = diff.month();
-
+function getYearNameRU(year: number): string {
     let yearName: string;
-    let monthName: string;
     switch (year) {
         case 0:
             yearName = "";
@@ -41,6 +31,37 @@ function dateByMonthRU(dateStart: Date, dateEnd: Date): string {
             yearName = year + " лет";
             break;
     }
+    return yearName;
+}
+
+function getYearNameEN(year: number): string {
+    let yearName: string;
+    switch (year) {
+        case 0:
+            yearName = "";
+            break;
+        case 1:
+            yearName = year + " year";
+            break;
+        default:
+            yearName = year + " years";
+            break;
+    }
+    return yearName;
+}
+
+function dateByMonthRU(dateStart: Date, dateEnd: Date): string {
+    let date1 = moment(dateStart);
+    let date2 = moment(dateEnd);
+
+    let diff = moment(date2.diff(date1), true);
+    diff.add(-1970, 'years');
+    diff.add(1, 'months');
+    let year = diff.year()
+    let month = diff.month();
+
+    let monthName: string;
+
     switch (month) {
         case 0:
             monthName = "";
@@ -57,18 +78,46 @@ function dateByMonthRU(dateStart: Date, dateEnd: Date): string {
             monthName = month + " месяцев";
             break;
     }
-    return yearName + ' ' + monthName;
+    return getYearNameRU(year) + ' ' + monthName;
+}
+
+function dateByMonthEN(dateStart: Date, dateEnd: Date): string {
+    let date1 = moment(dateStart);
+    let date2 = moment(dateEnd);
+
+    let diff = moment(date2.diff(date1), true);
+    diff.add(-1970, 'years');
+    diff.add(1, 'months');
+    let year = diff.year()
+    let month = diff.month();
+
+    let monthName: string;
+
+    switch (month) {
+        case 0:
+            monthName = "";
+            break;
+        case 1:
+            monthName = "1 month";
+            break;
+        default:
+            monthName = month + " months";
+            break;
+    }
+    return getYearNameRU(year) + ' ' + monthName;
 }
 
 export default function dateDiff(dateStart: Date = new Date(), dateEnd: Date = new Date(),
-                                 format: DATEDIFF_FORMAN = DATEDIFF_FORMAN.WITH_MONTH): string {
-    if (format === DATEDIFF_FORMAN.WITH_MONTH) {
-        return dateByMonthRU(dateStart, dateEnd)
+                                 format: DATEDIFF_FORMAT = DATEDIFF_FORMAT.WITH_MONTH, lang: 'ru' | 'en'): string {
+    if (format === DATEDIFF_FORMAT.WITH_MONTH) {
+        return lang == 'ru' ? dateByMonthRU(dateStart, dateEnd) : dateByMonthEN(dateStart, dateEnd);
     } else {
-        var months: number;
+        let months: number;
         months = (dateEnd.getFullYear() - dateStart.getFullYear()) * 12;
         months -= dateStart.getMonth() + 1;
         months += dateEnd.getMonth();
-        return Math.round((months <= 0 ? 0 : months) / 12).toString();
+        let year = Math.ceil((months <= 0 ? 0 : months) / 12);
+        if (year == 0) return lang == 'ru' ? 'меньше года' : '< year'
+        return lang == 'ru' ? getYearNameRU(year) : getYearNameEN(year);
     }
 }
