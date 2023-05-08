@@ -11,13 +11,11 @@ data.contactInfo.phone = "";
 data.contactInfo.linkedIn = "https://www.linkedin.com/in/ilya-onyanov-b81561178/";
 data.contactInfo.address = "Armenia, Yerevan";
 data.contactInfo.website = "www.onyanov.net";
-data.description = ["Имею большой опыт разработки на различных языках по методологиям Waterfall и Agile (KANBAN и SCRUM).",
-    "Работал в маленьких (1-3 человека) и больших(~300 человек) командах в различных ролях: " +
-    "3-я линия сопровождения, аналитик, разработчик, руководитель разработки, руководитель проекта.",
-    "Длительное время руководил командами разработки и отделом при доработке Siebel CRM.",
-    "В настоящее время решил сменить направление деятельности и заняться FullStack разработкой.",
-    "Для смены специальности реализовал несколько pet-проектов. Для систематизации знаний и расширения кругозора прошел дополнительное обучение.",
-    "В работе предпочитаю клиентоориентированный подход: стараюсь выявить требуемый процесс и ожидаемый результат."];
+data.description = ["I have extensive experience in developing in various languages using Waterfall and Agile methodologies (KANBAN and SCRUM).",
+    "I worked in small (1-3 people) and large (~300 people) teams in various position: support specialist, analyst, developer, team-lead, project manager.",
+    "For a long time I led the development teams and the department in the finalization of Siebel CRM.",
+    "Currently, I decided to change my profession and do FullStack development.",
+    "To change the specialty, I implemented several pet-projects. To systematize and expand knowledge, I underwent additional training."];
 data.photo = "photo";
 
 data.education.push({
@@ -32,12 +30,12 @@ data.expiriense.push({
     startDt: new Date('2007-05-21'),
     endDt: new Date('2009-01-21'),
     location: "Volgograd",
-    description: ["Develop corporate system with VB6. ",
-        "Migrate project to .NET Framework 2.0 and .NET Framework 3.5 on second step.",
-        "Was third-line support. Wrote user instructions.",
-        "I developed local support system, integrated in main solution,",
-        "access system and report system (dynamic SQL)."],
-    tags: ["MS SQL", "C#", "VB6", ".NET"]
+    description: ["I was developing corporate system by VB6.",
+        "I participated in migration project to .NET Framework 2.0 and on next step to .NET Framework 3.5.",
+        "I was 3-line support and was writing user instructions.",
+        "I was developing local support subsystem, " +
+        "access subsystem and report subsystem (dynamic SQL), integrated in main solution."],
+    tags: ["MS SQL", "C#", "VB6"]
 })
 data.expiriense.push({
     company: "Lukoil-Inform",
@@ -45,11 +43,10 @@ data.expiriense.push({
     startDt: new Date('2009-01-21'),
     endDt: new Date('2009-12-31'),
     location: "Volgograd",
-    description: ["I supported corporate solution on Dephi 2006 with COM+.",
-        "Tuning SQL-queries in Oracle and MS SQL.",
-        "Wrote user instructions.",
-        "Develop additional programs on .NET 2.0.",
-        "Developed report in CristalReport and MS Report."],
+    description: ["I was supporting corporate solution on Dephi 2006 with COM+.",
+        "I was tuning SQL-queries in Oracle DB and MS SQL.",
+        "I was writing user instructions and was developing additional programs on .NET 2.0.",
+        "I was creating reports in CristalReport and MS Report."],
     tags: ["MS SQL", "Oracle", "C#", "Dephi"]
 })
 data.expiriense.push({
@@ -58,17 +55,15 @@ data.expiriense.push({
     startDt: new Date('2010-01-21'),
     endDt: new Date('2011-08-10'),
     location: "Moscow",
-    description: ["Customise Oracle CRM on Demand for travel company.",
-        "Analyzed requirements,",
-        "develop intagration with local ABS(1С 7.7).",
-        "Wrote developers and users instructions.",
-        "<br/>",
-        "Customise SAP Business Objects for Holcim Rus.",
-        "Analyzed requirements and designed solution.",
-        "Wrote developers and users documentation.",
-        "Designed DB and MS OLAP (MS SQL Server 2008).",
-        "Developed ETL-procedure with SAP Business Objects Data Integrator.",
-        "Create SAP Business Objects reports and Xelsius-panel. Setup portal InfoView."],
+    description: ["I was customising Oracle CRM on Demand for travel company.",
+        "I was analyzing requirements and developing integration with account system (1С 7.7).",
+        "I was writing developers and users instructions.",
+        "I was customising SAP Business Objects for Holcim Rus.",
+        "I was analyzing requirements, design solution and " +
+        "writing developers and users documentation.",
+        "I designed DB and OLAP Cube (MS SQL Server 2008).",
+        "I was developing ETL-procedures with SAP Business Objects Data Integrator.",
+        "I was creating SAP Business Objects reports and Xelsius-panel, setting portal InfoView."],
     tags: ["MS SQL", "MS OLAP", "SAP Business Objects", "ETL", "Oracle CRM on Demand"]
 })
 data.expiriense.push({
@@ -77,9 +72,7 @@ data.expiriense.push({
     startDt: new Date('2011-08-22'),
     endDt: new Date('2013-06-26'),
     location: "Moscow",
-    description: ["Customise Siebel CRM in banks.",
-        "Wrote technical documentation.",
-        "Managed developer team (10 developer)."],
+    description: ["I was customising Siebel CRM in banks and managing developer team (10 developer)."],
     tags: ["Oracle", "Siebel CRM"]
 })
 data.expiriense.push({
@@ -88,10 +81,10 @@ data.expiriense.push({
     startDt: new Date('2013-07-01'),
     endDt: new Date('2014-03-19'),
     location: "Moscow",
-    description: ["Develop report system on Oracle BI by data Siebel СRM.",
-        "Designed DB and developed ETL with PL/SQL.",
-        "Created report with BI Answers.",
-        "Third-line support."],
+    description: ["I was developing report system in Oracle BI by data Siebel СRM.",
+        "I was designing DB and developed ETL with usage PL/SQL procedures.",
+        "I created reports with BI Answers.",
+        "I was Third-line support."],
     tags: ["Oracle", "Oracle BI", "ETL"]
 })
 data.expiriense.push({
@@ -100,8 +93,7 @@ data.expiriense.push({
     startDt: new Date('2014-04-18'),
     endDt: new Date('2015-04-17'),
     location: "Moscow",
-    description: ["Customise Siebel CRM in banks.",
-        "Solved non-standard problems."],
+    description: ["I was customising Siebel CRM in banks and solved non-standard problems."],
     tags: ["Oracle", "Siebel CRM"]
 })
 data.expiriense.push({
@@ -110,8 +102,8 @@ data.expiriense.push({
     startDt: new Date('2015-04-18'),
     endDt: new Date('2015-12-20'),
     location: "Moscow",
-    description: ["Customise Siebel CRM in banks.",
-        "Migrate solution to new interface version OpenUI."],
+    description: ["I was customising Siebel CRM.",
+        "I was migrating solution to new interface version - OpenUI."],
     tags: ["Oracle", "Siebel CRM"]
 })
 data.expiriense.push({
@@ -120,11 +112,11 @@ data.expiriense.push({
     startDt: new Date('2015-12-21'),
     endDt: new Date('2018-05-22'),
     location: "Moscow",
-    description: ["Design solution for Siebel CRM.",
-        "Managed developer team (30 person) and problem solving.",
-        "Coordinate migration to Agile process. Synchronise Agile and Waterfall stream.",
-        "Developed delivery system (used TeamCity + bash).",
-        "Migrate to CI/CD process in common tools (Ansible, Jenkins, Python)."],
+    description: ["I was designing solution base on Siebel CRM.",
+        "I was managing developer team (60 person) and solving technical-problem.",
+        "I was coordinating migration to Agile process. I was planning Agile and Waterfall stream synchronisation.",
+        "I was developing relise delivery system (used TeamCity + bash).",
+        "I was migrating to CI/CD process and central tools of company (Jenkins, Ansible, Python).."],
     tags: ["Oracle", "Siebel CRM", "TeamCity", "Ansible", "Jenkins", "CI/CD"]
 })
 data.expiriense.push({
@@ -133,10 +125,10 @@ data.expiriense.push({
     startDt: new Date('2018-05-23'),
     endDt: new Date('2019-04-26'),
     location: "Moscow",
-    description: ["Design solution for Siebel CRM.",
-        "Implementation of CI/CD practices for Siebel CRM.",
-        "Organized the work of geo-distributed teams (5 locations from 4 companies).",
-        "It turned out to switch to two-week releases instead of 2 times a year."],
+    description: ["I was designing solutions base on Siebel CRM.",
+        "I implemented of CI/CD practices for Siebel CRM.",
+        "I organized work for geo-distributed teams (5 locations from 4 companies).",
+        "It turned out to switch to two-week releases instead 2 times per year."],
     tags: ["Oracle", "Siebel CRM", "CI/CD"]
 })
 data.expiriense.push({
@@ -145,7 +137,7 @@ data.expiriense.push({
     startDt: new Date('2019-04-26'),
     endDt: new Date('2020-08-30'),
     location: "Moscow",
-    description: ["Design and development different solution based on Siebel CRM."],
+    description: ["I was designing and developing different solutions based on Siebel CRM."],
     tags: ["Oracle", "Siebel CRM"]
 })
 data.expiriense.push({
@@ -154,9 +146,10 @@ data.expiriense.push({
     startDt: new Date('2020-09-01'),
     endDt: new Date('2022-10-30'),
     location: "Moscow",
-    description: ["Responsible for retail business systems based on Siebel CRM: Collection, MDM, CC.",
-        "Organized the work of employees and contractors.",
-        "Solved technical problems."],
+    description: ["I was responding for retail business systems based on Siebel CRM: " +
+        "Collection, Master Data Management, contact center.",
+        "I organized the work of employees and contractors.",
+        "I was solving technical problems."],
     tags: ["Oracle", "Siebel CRM"]
 })
 data.expiriense.push({
@@ -175,8 +168,8 @@ data.languages.push({name: "English", level: "B1"});
 data.projects.push({
     name: "Personal site Sergey Agasaryan",
     source: "https://github.com/ionyanov/php_serguius.ru.git",
-    link: "http://onyanov.net/serguius",
-    description: ["Developed in 2004 on static HTML, later rewritten in PHP using class.phpSecurityAdmin and class.phpMysqlConnection libraries.",
+    link: "http://serguius.ru/",
+    description: ["Developed in 2004 with use static HTML, later rewritten to PHP using phpSecurityAdmin and phpMysqlConnection libraries.",
         "Database: MySQL.",
         "Design by customer.",
         "I developed about 30 different sites with a similar architecture during 2005-2010."],
@@ -185,14 +178,14 @@ data.projects.push({
     name: "Personal site on PHP",
     source: "https://github.com/ionyanov/php_onyanov.net",
     link: "http://onyanov.net/php/",
-    description: ["Personal page in PHP. A template was taken from open sources on static HTML and modified to be able to fill with data from the data structure"],
+    description: ["Personal page by PHP. A template was taken from open sources as static HTML and modified to be able to fill from the data structure."],
 })
 data.projects.push({
     name: "Study Project: TODO board",
     source: "https://github.com/ionyanov/oin-todo-desc",
-    link: "http://onyanov.net/kanban",
+    link: "http://onyanov.net/kanban/",
     description: ["A simple KANBAN board. In common mode it saves data in localStorage. After authorization it can works with the server.",
-        "Frontend: React 18.2 + axios + mobx + BOOTSTRAP + JWT",
+        "Frontend: React 18.2 + axios + mobx + BOOTSTRAP",
         "Backend: Node.js + express + nodemon"],
 })
 data.projects.push({
@@ -204,20 +197,22 @@ data.projects.push({
 data.projects.push({
     name: "Study Project: Catalog of articles",
     source: "https://github.com/ionyanov/reactstudyproject",
-    link: "http://onyanov.net/reactstudyproject",
-    description: ["Portal created in course of Ulbi Timur (https://ulbitv.ru/)",
-        "Webpack и Vite, Typescript, Babel, SCSS, eslint + prettier, jest, axios, Redux + RTK, storybook + loki, Cypress configured by manuals.",
+    link: "http://onyanov.net/reactstudyproject/",
+    description: ["Portal created in course of Ulbi Timur (https://ulbitv.ru/).",
+        "Webpack, Vite, Typescript, Babel, SCSS(modules), eslint + prettier, jest, axios, Redux + RTK Query, storybook + loki, Cypress configured by manuals.",
         "Architecture: Feature sliced design (https://feature-sliced.design/docs/get-started/tutorial)",
-        "Was developed components library: modals and portals, drop-down lists / menus, " +
-        "buttons with different themes, skeletons, pop-ups, lazy images, drawer, vertical and horizontal stacks, etc.)",
+        "Was developed library of components: modals and portals, drop-down list/menu, " +
+        "buttons with different themes, skeletons, lazy images, vertical and horizontal stacks, etc.)",
         "Lots of asynchronous components and lazy downloads. Endpoint injection. Throttle and debounce.",
         "The whole project is described in the Storybook (v6 and migration to v7). Screenshot testing with Loki",
         "The project is covered with unit tests (jest + React Testing Library). For E2E testing using Cypress.",
         "Visual report for all tests.",
         "For Routing use React-router-dom V6 with role-based access checking.",
         "Setup i18n.",
+        "Wrote few scripts with working with AST (Abstract syntax tree).",
         "GitHub pre-commit hooks and similar checks with Husky",
-        "Backend: json-server"]
+        "Backend: json-server",
+        "Storybook: http://onyanov.net/reactstudyproject/storybook/"]
 })
 
 export default data;

@@ -16,7 +16,7 @@ const ProjComponent: React.FC<CompProps> = ({projItem}) => {
             </div>
             <div className="projDescription">
                 <ul className="projDescription">
-                    {projItem.description.map(row => <li>{row}</li>)}
+                    {projItem.description.map((row, index) => <li key={index}>{row}</li>)}
                 </ul>
             </div>
         </div>

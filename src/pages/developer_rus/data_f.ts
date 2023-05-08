@@ -203,7 +203,7 @@ full_rus.projects.push({
 full_rus.projects.push({
     name: "Личный сайт Сергея Агасарян",
     source: "https://github.com/ionyanov/php_serguius.ru.git",
-    link: "http://onyanov.net/serguius",
+    link: "http://serguius.ru/",
     description: ["Разработан в 2004 на статичном HTML, Позднее переписан на PHP с использованием готовых библиотек class.phpSecurityAdmin и class.phpMysqlConnection.",
         "База данных на MySQL.",
         "Дизайн предоставлен заказчиком.",
@@ -212,7 +212,7 @@ full_rus.projects.push({
 full_rus.projects.push({
     name: "Учебный проект: Панель задач",
     source: "https://github.com/ionyanov/oin-todo-desc",
-    link: "http://onyanov.net/kanban",
+    link: "http://onyanov.net/kanban/",
     description: ["Простейщая KANBAN доска. В обычном режиме сохряняет данные в loсalStorage. После авторизации работа идет с данными на сервер.",
         "Frontend: React 18.2 + axios + mobx + bootstrap",
         "Backend: Node.js + express + nodemon"],
@@ -226,7 +226,7 @@ full_rus.projects.push({
 full_rus.projects.push({
     name: "Учебный проект: Каталог статей",
     source: "https://github.com/ionyanov/reactstudyproject",
-    link: "http://onyanov.net/reactstudyproject",
+    link: "http://onyanov.net/reactstudyproject/",
     description: ["Портал, созданный по курсу Улюби Тимура (https://ulbitv.ru/)",
         "С нуля настроен Webpack и Vite, Typescript, Babel, SCSS, eslint + prettier, jest, axios, Redux + RTK, storybook + loki, Cypress.",
         "Архитектура: Feature sliced design (https://feature-sliced.design/docs/get-started/tutorial)",
@@ -239,7 +239,8 @@ full_rus.projects.push({
         "Маршрутизация настроена с помощью React-router-dom V6 с проверкой доступа по ролям. ",
         "Настроен i18n.",
         "GitHub pre-commit хуки и аналогичные проверки с помощью Husky",
-        "Backend: json-server"],
+        "Backend: json-server",
+        "Storybook: http://onyanov.net/reactstudyproject/storybook/"],
 })
 full_rus.projects.push({
     name: "Интернет магазин косплея на React",

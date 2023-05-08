@@ -60,7 +60,7 @@ const DeveloperEng: React.FC = React.forwardRef(() => {
                 </div>
             </div>
             <div className="descriptionHolder">
-                {currentCV.description?.map(line => <p className="description">{line}</p>)}
+                {currentCV.description?.map((line, index) => <p key={index} className="description">{line}</p>)}
             </div>
             <div className="content">
                 <div className="contentRow">
