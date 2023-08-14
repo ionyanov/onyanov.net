@@ -7,6 +7,19 @@ interface CompProps {
     projItem: Project;
 }
 
+function transformHyperlinks(text: string): string {
+    const urlRegex = /(((https?:\/\/)|(www\.))[^\s]+)/g;
+    const detectURL = text.match(urlRegex);
+
+    let resultPost = text
+    if (detectURL) {
+        detectURL.forEach(url => {
+            resultPost = resultPost.replace(url, `<a href="${url}" target="_blank" >${url.trim()}</a>`)
+        })
+    }
+    return resultPost;
+}
+
 const ProjComponent: React.FC<CompProps> = ({projItem}) => {
     return (
         <div className="projItem">
@@ -16,7 +29,8 @@ const ProjComponent: React.FC<CompProps> = ({projItem}) => {
             </div>
             <div className="projDescription">
                 <ul className="projDescription">
-                    {projItem.description.map((row, index) => <li key={index}>{row}</li>)}
+                    {projItem.description.map((row, index) => <li key={index}
+                                                                  dangerouslySetInnerHTML={{__html: transformHyperlinks(row)}}/>)}
                 </ul>
             </div>
         </div>

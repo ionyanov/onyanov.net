@@ -9,7 +9,7 @@ interface BtnGitHubProp {
 export const BtnGitHub: FC<BtnGitHubProp> = ({src, title = 'Исходнй код'}) => {
     return (
         <Link to={src} target={"_blank"} title={title}>
-            <img src={"https://github.com/fluidicon.png"} className="gitHub" alt={src}/>
+            <img src='images/github.png' className="gitHub" alt={src}/>
         </Link>
     );
 };

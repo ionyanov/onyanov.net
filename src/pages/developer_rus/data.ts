@@ -7,17 +7,16 @@ dev_rus.lastName = "Онянов";
 dev_rus.dateOfBirth = new Date('1986-04-16');
 dev_rus.jobTitle = "Fullstack developer";
 dev_rus.contactInfo.email = "onyanov@gmail.com";
-dev_rus.contactInfo.phone = "";
+dev_rus.contactInfo.phone = "+374 43292406";
 dev_rus.contactInfo.linkedIn = "https://www.linkedin.com/in/ilya-onyanov-b81561178/";
 dev_rus.contactInfo.address = "Армения, Ереван";
 dev_rus.contactInfo.website = "www.onyanov.net";
 dev_rus.description = ["Имею большой опыт разработки на различных языках по методологиям Waterfall и Agile (KANBAN и SCRUM).",
     "Работал в маленьких (1-3 человека) и больших(~300 человек) командах в различных ролях: " +
     "3-я линия сопровождения, аналитик, разработчик, руководитель разработки, руководитель проекта.",
-    "Длительное время руководил командами разработки и отделом при доработке Siebel CRM.",
+    "Длительное время руководил командами разработки и отделом Siebel CRM.",
     "В настоящее время решил сменить направление деятельности и заняться FullStack разработкой.",
-    "Для смены специальности реализовал несколько pet-проектов. Для систематизации и расширения знаний, я прошел дополнительное обучение.",
-    "В работе стараюсь добится максимального результата имеющимися ресурсами."];
+    "Для смены специальности реализовал несколько pet-проектов. Для систематизации и расширения знаний, я прошел дополнительное обучение."];
 dev_rus.photo = "photo";
 
 dev_rus.education.push({
@@ -33,7 +32,7 @@ dev_rus.expiriense.push({
     endDt: new Date('2009-01-21'),
     location: "Волгоград",
     description: ["Участвовал в разработке корпоративной системы производственного учета на VB6 " +
-        "и последующий перевод всего проекта на .NET Framework 2.0 и далее на .NET Framework 3.5.",
+    "и последующий перевод всего проекта на .NET Framework 2.0 и далее на .NET Framework 3.5.",
         "Занимался поддержкой пользователей и написанием пользовательских инструкций.",
         "Разрабатывал подсистему поддержки пользователей, встроенную в основную систему, " +
         "подсистему управления правами пользователей и подсистему отчетности (динамическое генерирование SQL).",
@@ -173,7 +172,7 @@ dev_rus.expiriense.push({
     endDt: new Date('2022-10-30'),
     location: "Москва",
     description: ["Отвечал за развитие систем розничного бизнеса на базе Siebel CRM: " +
-        "Collection, Master Data Management, контактный-центр.",
+    "Collection, Master Data Management, контактный-центр.",
         "Организовал совметсную работу сотрудников центра компетенции и подрядчиков.",
         "Участвовал в выборе решения по импортозамещению и проработке планов внедрения.",
         "Решал сложные технические задачи в зоне ответсвенности центра компетенций."],
@@ -211,9 +210,10 @@ dev_rus.projects.push({
     name: "Учебный проект: Панель задач",
     source: "https://github.com/ionyanov/oin-todo-desc",
     link: "http://onyanov.net/kanban/",
-    description: ["Простейшая KANBAN доска. В обычном режиме сохряняет данные в loсalStorage. После авторизации возможна работа с данными на сервер.",
+    description: ["Простейшая KANBAN доска. В обычном режиме сохраняет данные в loсalStorage. После авторизации возможна работа с данными на сервер.",
         "Frontend: React 18.2 + axios + mobx + BOOTSTRAP",
-        "Backend: Node.js + express + nodemon"],
+        "Backend: Node.js + express + nodemon",
+        "Для авторизации используется пароль KANBAN"],
 })
 dev_rus.projects.push({
     name: "Текущий сайт",
@@ -224,22 +224,22 @@ dev_rus.projects.push({
 dev_rus.projects.push({
     name: "Учебный проект: Каталог статей",
     source: "https://github.com/ionyanov/reactstudyproject",
-    link: "http://onyanov.net/reactstudyproject",
+    link: "http://react.onyanov.net/",
     description: ["Портал, созданный по курсу Ульби Тимура (https://ulbitv.ru/)",
         "С нуля настроен Webpack, Vite, Typescript, Babel, SCSS(modules), eslint + prettier, jest, axios, Redux + RTK Query, storybook + loki, Cypress.",
-        "Архитектура: Feature sliced design (https://feature-sliced.design/docs/get-started/tutorial)/",
-        "Разработана библиотека компанент (модальные окна с порталами, выпадающие списки\\меню, " +
+        "Архитектура: Feature sliced design (https://feature-sliced.design/docs/get-started/tutorial).",
+        "Разработана библиотека компанент (модальные окна с порталами, выпадающие списки/меню, " +
         "кнопки с разными темами, скелетоны, попапы, ленивые изображения, вертикальные и горизонтальные стеки и т.д.).",
         "Создано множество асинхронных компанентов и lazy загрузок. Инъекция эндпоинтов. Throttle и debounce.",
         "Весь проект описан в Storybook (изначально v6 с миграцией на v7). Скриншотное тестированние с помощью Loki.",
+        "Storybook: http://react.onyanov.net/storybook/",
         "Проект покрыт юнит тестами (jest + React Testing Library). Для E2E-тестирования используется Cypress.",
-        "Для тестов настроены визуальные ответы.",
+        "Для тестов настроены визуальные отчеты.",
         "Маршрутизация настроена с помощью React-router-dom V6 с проверкой доступа по ролям.",
         "Настроен i18n.",
         "Написано несколько вспомогательных скриптов с анализом AST (Abstract syntax tree).",
         "GitHub pre-commit хуки и аналогичные проверки с помощью Husky.",
-        "Backend: json-server",
-        "Storybook: http://onyanov.net/reactstudyproject/storybook/"],
+        "Backend: json-server"],
 })
 
 export default dev_rus;

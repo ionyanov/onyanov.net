@@ -7,13 +7,13 @@ data.lastName = "Onyanov";
 data.dateOfBirth = new Date('1986-04-16');
 data.jobTitle = "Fullstack developer";
 data.contactInfo.email = "onyanov@gmail.com";
-data.contactInfo.phone = "";
+data.contactInfo.phone = "+374 43292406";
 data.contactInfo.linkedIn = "https://www.linkedin.com/in/ilya-onyanov-b81561178/";
 data.contactInfo.address = "Armenia, Yerevan";
 data.contactInfo.website = "www.onyanov.net";
-data.description = ["I have extensive experience in developing in various languages using Waterfall and Agile methodologies (KANBAN and SCRUM).",
-    "I worked in small (1-3 people) and large (~300 people) teams in various position: support specialist, analyst, developer, team-lead, project manager.",
-    "For a long time I led the development teams and the department in the finalization of Siebel CRM.",
+data.description = ["I have extensive experience in developing in different languages using Waterfall and Agile methodologies (KANBAN and SCRUM).",
+    "I worked in small (1-3 people) and large (~300 people) teams in different position: support specialist, analyst, developer, team-lead, project manager.",
+    "For a long time I led the development teams and the department of Siebel CRM.",
     "Currently, I decided to change my profession and do FullStack development.",
     "To change the specialty, I implemented several pet-projects. To systematize and expand knowledge, I underwent additional training."];
 data.photo = "photo";
@@ -197,22 +197,22 @@ data.projects.push({
 data.projects.push({
     name: "Study Project: Catalog of articles",
     source: "https://github.com/ionyanov/reactstudyproject",
-    link: "http://onyanov.net/reactstudyproject/",
+    link: "http://react.onyanov.net/",
     description: ["Portal created in course of Ulbi Timur (https://ulbitv.ru/).",
         "Webpack, Vite, Typescript, Babel, SCSS(modules), eslint + prettier, jest, axios, Redux + RTK Query, storybook + loki, Cypress configured by manuals.",
         "Architecture: Feature sliced design (https://feature-sliced.design/docs/get-started/tutorial)",
         "Was developed library of components: modals and portals, drop-down list/menu, " +
         "buttons with different themes, skeletons, lazy images, vertical and horizontal stacks, etc.)",
         "Lots of asynchronous components and lazy downloads. Endpoint injection. Throttle and debounce.",
-        "The whole project is described in the Storybook (v6 and migration to v7). Screenshot testing with Loki",
+        "The whole project is described in the Storybook (v6 and migration to v7). Screenshot testing with Loki.",
+        "Storybook: http://react.onyanov.net/storybook/",
         "The project is covered with unit tests (jest + React Testing Library). For E2E testing using Cypress.",
         "Visual report for all tests.",
         "For Routing use React-router-dom V6 with role-based access checking.",
         "Setup i18n.",
         "Wrote few scripts with working with AST (Abstract syntax tree).",
         "GitHub pre-commit hooks and similar checks with Husky",
-        "Backend: json-server",
-        "Storybook: http://onyanov.net/reactstudyproject/storybook/"]
+        "Backend: json-server"]
 })
 
 export default data;
