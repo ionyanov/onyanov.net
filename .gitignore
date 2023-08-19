@@ -6,6 +6,10 @@
 /.idea
 .pnp.jss
 
+# next.js
+/.next/
+/out/
+
 # production
 /build
 

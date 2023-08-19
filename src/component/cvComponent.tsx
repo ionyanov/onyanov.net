@@ -1,20 +1,31 @@
-import React, {useEffect, useState} from 'react';
-import ExpComponent, {DATE_FORMAT} from "../../component/expComponent";
-import EduComponent from "../../component/eduComponent";
-import Expiriense from "../../model/expiriense";
-import currentCV from "./data";
-import {useFilter} from "../../helpers/filterData";
-import FilterComponent from "../../component/filterComponent";
-import {Link} from "react-router-dom";
-import {ContactInformationItem} from "../../component/ContactInformationItem";
-import ProjComponent from "../../component/projComponent";
-import BtnComponent from "../../component/btnComponent";
+'use client'
 
-const DeveloperEng: React.FC = React.forwardRef(() => {
+import {FC, useEffect, useState} from 'react';
+import Link from "next/link";
+import Expiriense from "../model/expiriense";
+import CV from "../model/resume";
+import {useFilter} from "../helpers/filterData";
+import ExpComponent, {DATE_FORMAT} from "./expComponent";
+import EduComponent from "./eduComponent";
+import {ContactInformationItem} from "./ContactInformationItem";
+import ProjComponent from "./projComponent";
+import BtnComponent from "./btnComponent";
+import FilterComponent from "./filterComponent";
+
+interface CVCompProps {
+    currentCV: CV
+}
+
+const CVComponent: FC<CVCompProps> = ({currentCV}) => {
     let [expiriense, setExpiriense] = useState<Expiriense[]>([]);
     let {sortOrder, selectedTags} = useFilter()
 
     useEffect(() => {
+        currentCV.fullName = `${currentCV.lastName} ${currentCV.firstName} ${currentCV.middleName}`;
+        let _tags: string[] = [];
+        currentCV.expiriense.map(item => _tags = [...new Set([..._tags, ...item.tags])]);
+        currentCV.tags = _tags.filter(Boolean).sort();
+
         document.title = currentCV.fullName;
         setExpiriense(currentCV.expiriense);
     }, []);
@@ -33,25 +44,25 @@ const DeveloperEng: React.FC = React.forwardRef(() => {
             <div className="cvTitle">
                 <div className="contactInfo">
                     <ContactInformationItem style='contactPhone'
-                                            title='Phone'
+                                            title={currentCV.local.Phone}
                     >{currentCV.contactInfo.phone}</ContactInformationItem>
                     <ContactInformationItem style='contactEmail'
-                                            title='Email'
+                                            title={currentCV.local.Email}
                     >{currentCV.contactInfo.email}</ContactInformationItem>
                     <ContactInformationItem style='contactLinkedin'
-                                            title='LinkedIn'
+                                            title={currentCV.local.LinkedIn}
                     >{!currentCV.contactInfo.linkedIn ?
                         ''
                         :
-                        <Link to={currentCV.contactInfo.linkedIn || ''}
-                              target='_blank'>profile</Link>
+                        <Link href={currentCV.contactInfo.linkedIn || ''}
+                              target='_blank'>{currentCV.local.profile}</Link>
                     }
                     </ContactInformationItem>
                     <ContactInformationItem style='contactWeb'
-                                            title='Web'
+                                            title={currentCV.local.Web}
                     >{currentCV.contactInfo.website}</ContactInformationItem>
                     <ContactInformationItem style='contactAddress'
-                                            title='Address'
+                                            title={currentCV.local.Address}
                     >{currentCV.contactInfo.address}</ContactInformationItem>
                 </div>
                 <div className="nameTitle">
@@ -65,23 +76,24 @@ const DeveloperEng: React.FC = React.forwardRef(() => {
             <div className="content">
                 <div className="contentRow">
                     <div className="contentCol colHead">
-                        <h2 className="colHead">Experience</h2>
-                        <FilterComponent tags={currentCV.tags} lang={'en'}/>
+                        <h2 className="colHead">{currentCV.local.Experience}</h2>
+                        <FilterComponent tags={currentCV.tags} lang={currentCV.local.lang}/>
                     </div>
                     <div className="contentCol colBody">{expiriense.sort((a: Expiriense, b: Expiriense) =>
                         (a.startDt < b.startDt) ? sortOrder * 1 : ((a.startDt > b.startDt) ? sortOrder * -1 : 0)
                     ).map((item, index) =>
-                        <ExpComponent key={index} workItem={item} format={DATE_FORMAT.SHORT} lang={'en'}/>
+                        <ExpComponent key={index} workItem={item} format={DATE_FORMAT.SHORT}
+                                      lang={currentCV.local.lang}/>
                     )}</div>
                 </div>
                 <div className="contentRow">
-                    <div className="contentCol colHead"><h2 className="colHead">Education</h2></div>
+                    <div className="contentCol colHead"><h2 className="colHead">{currentCV.local.Education}</h2></div>
                     <div className="contentCol colBody">{currentCV.education.map((item, index) =>
                         <EduComponent key={index} eduItem={item}/>
                     )}</div>
                 </div>
                 <div className="contentRow">
-                    <div className="contentCol colHead"><h2 className="colHead">Languages</h2></div>
+                    <div className="contentCol colHead"><h2 className="colHead">{currentCV.local.Languages}</h2></div>
                     <div className="contentCol colBody">
                         {currentCV.languages.map((item) => (
                             <p className="description" key={item.name}>
@@ -91,7 +103,7 @@ const DeveloperEng: React.FC = React.forwardRef(() => {
                     </div>
                 </div>
                 <div className="contentRow">
-                    <div className="contentCol colHead"><h2 className="colHead">Projects</h2></div>
+                    <div className="contentCol colHead"><h2 className="colHead">{currentCV.local.Projects}</h2></div>
                     <div className="contentCol colBody">{currentCV.projects.filter(itm => itm.link)
                         .map((item, index) =>
                             <ProjComponent key={index} projItem={item}/>
@@ -100,6 +112,6 @@ const DeveloperEng: React.FC = React.forwardRef(() => {
             </div>
         </div>
     );
-});
+};
 
-export default DeveloperEng;
+export default CVComponent;

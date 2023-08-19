@@ -1,6 +1,21 @@
-import CV from "../../model/resume";
+import CV from "../model/resume";
 
 const dev_rus: CV = new CV();
+dev_rus.local = {
+    lang: 'ru',
+    Phone: 'Телефон',
+    Email: 'Email',
+    LinkedIn: 'LinkedIn',
+    profile: 'профиль',
+    Web: 'Web',
+    Address: 'Адрес',
+    Experience: 'Опыт работы',
+    Education: 'Образование',
+    Languages: 'Языки',
+    Projects: 'Проекты'
+}
+
+
 dev_rus.firstName = "Илья";
 dev_rus.middleName = "Николаевич";
 dev_rus.lastName = "Онянов";
@@ -219,20 +234,20 @@ dev_rus.projects.push({
     name: "Текущий сайт",
     source: "https://github.com/ionyanov/onyanov.net",
     link: "http://onyanov.net/",
-    description: ["React + Typescript"],
+    description: ["React + Typescript + Next.JS"],
 })
 dev_rus.projects.push({
     name: "Учебный проект: Каталог статей",
     source: "https://github.com/ionyanov/reactstudyproject",
     link: "http://react.onyanov.net/",
-    description: ["Портал, созданный по курсу Ульби Тимура (https://ulbitv.ru/)",
+    description: ["Портал, созданный по курсу Ульби Тимура ( https://ulbitv.ru )",
         "С нуля настроен Webpack, Vite, Typescript, Babel, SCSS(modules), eslint + prettier, jest, axios, Redux + RTK Query, storybook + loki, Cypress.",
-        "Архитектура: Feature sliced design (https://feature-sliced.design/docs/get-started/tutorial).",
+        "Архитектура: Feature sliced design ( https://feature-sliced.design/docs/get-started/tutorial ).",
         "Разработана библиотека компонент (модальные окна с порталами, выпадающие списки/меню, " +
         "кнопки с разными темами, скелетоны, попапы, ленивые изображения, вертикальные и горизонтальные стеки и т.д.).",
         "Создано множество асинхронных компонентов и lazy загрузок. Инъекция эндпоинтов. Throttle и debounce.",
         "Весь проект описан в Storybook (изначально v6 с миграцией на v7). Скриншотное тестированние с помощью Loki.",
-        "Storybook: http://react.onyanov.net/storybook/",
+        "Storybook: http://react.onyanov.net/storybook/ ",
         "Проект покрыт юнит тестами (jest + React Testing Library). Для E2E-тестирования используется Cypress.",
         "Для тестов настроены визуальные отчеты.",
         "Маршрутизация настроена с помощью React-router-dom V6 с проверкой доступа по ролям.",

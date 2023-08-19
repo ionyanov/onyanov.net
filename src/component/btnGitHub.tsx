@@ -1,5 +1,5 @@
-import {Link} from "react-router-dom";
 import React, {FC} from "react";
+import Link from "next/link";
 
 interface BtnGitHubProp {
     src: string,
@@ -8,7 +8,7 @@ interface BtnGitHubProp {
 
 export const BtnGitHub: FC<BtnGitHubProp> = ({src, title = 'Исходнй код'}) => {
     return (
-        <Link to={src} target={"_blank"} title={title}>
+        <Link href={src} target={"_blank"} title={title}>
             <img src='images/github.png' className="gitHub" alt={src}/>
         </Link>
     );

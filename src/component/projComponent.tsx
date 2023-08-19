@@ -1,7 +1,7 @@
 import React from 'react';
 import Project from "../model/project";
-import {Link} from "react-router-dom";
 import {BtnGitHub} from "./btnGitHub";
+import Link from "next/link";
 
 interface CompProps {
     projItem: Project;
@@ -24,7 +24,7 @@ const ProjComponent: React.FC<CompProps> = ({projItem}) => {
     return (
         <div className="projItem">
             <div className="projName">
-                <Link className="projName" to={projItem.link} target={"_blank"}>{projItem.name}</Link>
+                <Link className="projName" href={projItem.link} target={"_blank"}>{projItem.name}</Link>
                 <BtnGitHub src={projItem.source}/>
             </div>
             <div className="projDescription">

@@ -2,14 +2,27 @@ import Expiriense from "./expiriense";
 import Education from "./education";
 import Project from "./project";
 
+class Locale {
+    public lang: 'ru' | 'en' = 'ru';
+    public Phone: string = '';
+    public Email: string = '';
+    public LinkedIn: string = '';
+    public profile: string = '';
+    public Web: string = '';
+    public Address: string = '';
+    public Experience: string = '';
+    public Education: string = '';
+    public Languages: string = '';
+    public Projects: string = '';
+
+}
+
 class CV {
     public firstName: string = "";
     public middleName?: string;
     public lastName: string = "";
 
-    get fullName(): string {
-        return `${this.lastName} ${this.firstName} ${this.middleName}`;
-    }
+    public fullName: string = "";
 
     public photo?: string;
     public dateOfBirth?: Date;
@@ -30,11 +43,21 @@ class CV {
     public expiriense: Expiriense[] = [];
     public projects: Project[] = [];
 
-    get tags(): string [] {
-        let _tags: string[] = []
-        this.expiriense.map(item => _tags = [...new Set([..._tags, ...item.tags])]);
-        return _tags.filter(Boolean).sort();
-    }
+    public tags: string[] = [];
+
+    public local: Locale = {
+        Address: "",
+        Education: "",
+        Email: "",
+        Experience: "",
+        Languages: "",
+        LinkedIn: "",
+        Phone: "",
+        Projects: "",
+        Web: "",
+        lang: 'ru',
+        profile: ""
+    };
 }
 
 export default CV;

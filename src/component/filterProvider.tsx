@@ -1,3 +1,5 @@
+'use client'
+
 import React, {type FC, type PropsWithChildren, useMemo, useState} from 'react'
 import {FiltereContext, SORT_DIRECTION} from "../helpers/filterData";
 
