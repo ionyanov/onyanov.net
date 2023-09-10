@@ -199,7 +199,8 @@ data_enu.projects.push({
     link: "http://onyanov.net/kanban/",
     description: ["A simple KANBAN board. In common mode it saves data in localStorage. After authorization it can works with the server.",
         "Frontend: React 18.2 + axios + mobx + BOOTSTRAP",
-        "Backend: Node.js + express + nodemon"],
+        "Backend: Node.js + express + nodemon",
+        "For authorisation use password KANBAN"],
 })
 data_enu.projects.push({
     name: "Current site",

@@ -187,7 +187,7 @@ dev_rus.expiriense.push({
     endDt: new Date('2022-10-30'),
     location: "Москва",
     description: ["Отвечал за развитие систем розничного бизнеса на базе Siebel CRM: " +
-    "Collection, Master Data Management, контактный-центр.",
+        "Collection, Master Data Management, контактный-центр.",
         "Организовал совместную работу сотрудников центра компетенции и подрядчиков.",
         "Участвовал в выборе решения по импортозамещению и проработке планов внедрения.",
         "Решал сложные технические задачи в зоне ответсвенности центра компетенций."],
@@ -195,7 +195,7 @@ dev_rus.expiriense.push({
 })
 dev_rus.expiriense.push({
     company: "Солвит АМ",
-    title: "Технический директор",
+    title: "Разработчик",
     startDt: new Date('2022-10-24'),
     endDt: undefined,
     location: "Ереван",
