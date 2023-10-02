@@ -228,5 +228,13 @@ data_enu.projects.push({
         "GitHub pre-commit hooks and similar checks with Husky",
         "Backend: json-server"]
 })
+data_enu.projects.push({
+    name: "Internet shop for handmade cosplay staff",
+    source: "https://github.com/ionyanov/neocosplayshop",
+    link: "https://neocosplayshop.online/",
+    description: ["Allows to maintain a catalog of products. Communication with customers is carried out via mail (specifics of the business process).",
+        "Frontend: Vite + React + TypeScript + Material UI + RTK Query",
+        "Backend: Nest.js + Multer + Prisma + MYSQL"],
+})
 
 export default data_enu;

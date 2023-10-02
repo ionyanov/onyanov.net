@@ -218,13 +218,13 @@ dev_rus.projects.push({
 dev_rus.projects.push({
     name: "Сайт-визитка на PHP",
     source: "https://github.com/ionyanov/php_onyanov.net",
-    link: "http://onyanov.net/php/",
+    link: "https://onyanov.net/php/",
     description: ["Личная страница на PHP. Был взят шаблон из открытых источников на статичном HTML и доработан для возможности наполнения из структуры данных."],
 })
 dev_rus.projects.push({
     name: "Учебный проект: Панель задач",
     source: "https://github.com/ionyanov/oin-todo-desc",
-    link: "http://onyanov.net/kanban/",
+    link: "https://onyanov.net/kanban/",
     description: ["Простейшая KANBAN доска. В обычном режиме сохраняет данные в loсalStorage. После авторизации возможна работа с данными на сервер.",
         "Frontend: React 18.2 + axios + mobx + BOOTSTRAP",
         "Backend: Node.js + express + nodemon",
@@ -233,13 +233,13 @@ dev_rus.projects.push({
 dev_rus.projects.push({
     name: "Текущий сайт",
     source: "https://github.com/ionyanov/onyanov.net",
-    link: "http://onyanov.net/",
+    link: "https://onyanov.net/",
     description: ["React + Typescript + Next.JS"],
 })
 dev_rus.projects.push({
     name: "Учебный проект: Каталог статей",
     source: "https://github.com/ionyanov/reactstudyproject",
-    link: "http://react.onyanov.net/",
+    link: "https://react.onyanov.net/",
     description: ["Портал, созданный по курсу Ульби Тимура ( https://ulbitv.ru )",
         "С нуля настроен Webpack, Vite, Typescript, Babel, SCSS(modules), eslint + prettier, jest, axios, Redux + RTK Query, storybook + loki, Cypress.",
         "Архитектура: Feature sliced design ( https://feature-sliced.design/docs/get-started/tutorial ).",
@@ -247,7 +247,7 @@ dev_rus.projects.push({
         "кнопки с разными темами, скелетоны, попапы, ленивые изображения, вертикальные и горизонтальные стеки и т.д.).",
         "Создано множество асинхронных компонентов и lazy загрузок. Инъекция эндпоинтов. Throttle и debounce.",
         "Весь проект описан в Storybook (изначально v6 с миграцией на v7). Скриншотное тестированние с помощью Loki.",
-        "Storybook: http://react.onyanov.net/storybook/ ",
+        "Storybook: https://react.onyanov.net/storybook/ ",
         "Проект покрыт юнит тестами (jest + React Testing Library). Для E2E-тестирования используется Cypress.",
         "Для тестов настроены визуальные отчеты.",
         "Маршрутизация настроена с помощью React-router-dom V6 с проверкой доступа по ролям.",
@@ -255,6 +255,14 @@ dev_rus.projects.push({
         "Написано несколько вспомогательных скриптов с анализом AST (Abstract syntax tree).",
         "GitHub pre-commit хуки и аналогичные проверки с помощью Husky.",
         "Backend: json-server"],
+})
+dev_rus.projects.push({
+    name: "Интернет магазин костюмов для косплея",
+    source: "https://github.com/ionyanov/neocosplayshop",
+    link: "https://neocosplayshop.online/",
+    description: ["Позволяет вести каталог товаров. Общение с покупателями ведётся через почту (специфика бизнес-процесса).",
+        "Frontend: Vite + React + TypeScript + Material UI + RTK Query",
+        "Backend: Nest.js + Multer + Prisma + MYSQL"],
 })
 
 export default dev_rus;
