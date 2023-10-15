@@ -12,7 +12,7 @@ data_enu.local = {
     Experience: 'Experience',
     Education: 'Education',
     Languages: 'Languages',
-    Projects: 'Projects'
+    Projects: 'Portfolio'
 }
 data_enu.firstName = "Ilya";
 data_enu.middleName = "";
@@ -160,7 +160,7 @@ data_enu.expiriense.push({
     endDt: new Date('2022-10-30'),
     location: "Moscow",
     description: ["I was responding for retail business systems based on Siebel CRM: " +
-    "Collection, Master Data Management, contact center.",
+        "Collection, Master Data Management, contact center.",
         "I organized the work of employees and contractors.",
         "I was solving technical problems."],
     tags: ["Oracle", "Siebel CRM"]
@@ -175,13 +175,13 @@ data_enu.expiriense.push({
     tags: []
 })
 
-data_enu.languages.push({name: "Russian", level: "Native"});
-data_enu.languages.push({name: "English", level: "B1"});
+data_enu.languages.push({ name: "Russian", level: "Native" });
+data_enu.languages.push({ name: "English", level: "B1" });
 
 data_enu.projects.push({
     name: "Personal site Sergey Agasaryan",
     source: "https://github.com/ionyanov/php_serguius.ru.git",
-    link: "http://serguius.ru/",
+    link: "https://serguius.onyanov.net/",
     description: ["Developed in 2004 with use static HTML, later rewritten to PHP using phpSecurityAdmin and phpMysqlConnection libraries.",
         "Database: MySQL.",
         "Design by customer.",
@@ -190,28 +190,28 @@ data_enu.projects.push({
 data_enu.projects.push({
     name: "Personal site on PHP",
     source: "https://github.com/ionyanov/php_onyanov.net",
-    link: "http://onyanov.net/php/",
+    link: "https://onyanov.net/php/",
     description: ["Personal page by PHP. A template was taken from open sources as static HTML and modified to be able to fill from the data structure."],
 })
 data_enu.projects.push({
     name: "Study Project: TODO board",
     source: "https://github.com/ionyanov/oin-todo-desc",
-    link: "http://onyanov.net/kanban/",
+    link: "https://onyanov.net/kanban/",
     description: ["A simple KANBAN board. In common mode it saves data in localStorage. After authorization it can works with the server.",
-        "Frontend: React 18.2 + axios + mobx + BOOTSTRAP",
+        "Frontend: React + axios + mobx + BOOTSTRAP",
         "Backend: Node.js + express + nodemon",
         "For authorisation use password KANBAN"],
 })
 data_enu.projects.push({
     name: "Current site",
     source: "https://github.com/ionyanov/onyanov.net",
-    link: "http://onyanov.net/",
+    link: "https://onyanov.net/",
     description: ["React + Typescript + Next.JS"],
 })
 data_enu.projects.push({
     name: "Study Project: Catalog of articles",
     source: "https://github.com/ionyanov/reactstudyproject",
-    link: "http://react.onyanov.net/",
+    link: "https://react.onyanov.net/",
     description: ["Portal created in course of Ulbi Timur ( https://ulbitv.ru/ ).",
         "Webpack, Vite, Typescript, Babel, SCSS(modules), eslint + prettier, jest, axios, Redux + RTK Query, storybook + loki, Cypress configured by manuals.",
         "Architecture: Feature sliced design ( https://feature-sliced.design/docs/get-started/tutorial )",
@@ -235,6 +235,18 @@ data_enu.projects.push({
     description: ["Allows to maintain a catalog of products. Communication with customers is carried out via mail (specifics of the business process).",
         "Frontend: Vite + React + TypeScript + Material UI + RTK Query",
         "Backend: Nest.js + Multer + Prisma + MYSQL"],
+})
+data_enu.projects.push({
+    name: "Personal site Sergey Agasaryan 2.0",
+    source: "https://github.com/ionyanov/serguius.ru",
+    link: "https://serguius.ru/",
+    description: ["Allows to maintain a catalog of pictures.",
+        "I deside to do separete admin pannel and main frontend for perfomance reason. " +
+        "In main frontend I use Next with static pages. " +
+        "In admin pannel I developed button wtich call script for build and deploy Frontend project.",
+        "Admin panel: Vite + React + TypeScript + Material UI + RTK Query",
+        "Backend: Nest.js + Multer + Sharp + Prisma + MYSQL",
+        "Frontend: React + Typescript + Next.JS"],
 })
 
 export default data_enu;

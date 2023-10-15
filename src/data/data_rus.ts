@@ -12,7 +12,7 @@ dev_rus.local = {
     Experience: 'Опыт работы',
     Education: 'Образование',
     Languages: 'Языки',
-    Projects: 'Проекты'
+    Projects: 'Портфолио'
 }
 
 
@@ -47,10 +47,10 @@ dev_rus.expiriense.push({
     endDt: new Date('2009-01-21'),
     location: "Волгоград",
     description: ["Участвовал в разработке корпоративной системы производственного учета на VB6 " +
-    "и последующий перевод всего проекта на .NET Framework 2.0 и далее на .NET Framework 3.5.",
+        "и последующий перевод всего проекта на .NET Framework 2.0 и далее на .NET Framework 3.5.",
         "Занимался поддержкой пользователей и написанием пользовательских инструкций.",
-        "Разрабатывал подсистему поддержки пользователей, встроенную в основную систему, " +
-        "подсистему управления правами пользователей и подсистему отчетности (динамическое генерирование SQL).",
+    "Разрабатывал подсистему поддержки пользователей, встроенную в основную систему, " +
+    "подсистему управления правами пользователей и подсистему отчетности (динамическое генерирование SQL).",
         "Разрабатывал интеграция с MS Office и 1C. Работал с SVN и SourceSafe."],
     tags: ["MS SQL", "C#", "VB6"]
 })
@@ -203,13 +203,13 @@ dev_rus.expiriense.push({
     tags: []
 })
 
-dev_rus.languages.push({name: "Русский", level: "родной"});
-dev_rus.languages.push({name: "Английский", level: "читаю профессиональную литературу"});
+dev_rus.languages.push({ name: "Русский", level: "родной" });
+dev_rus.languages.push({ name: "Английский", level: "читаю профессиональную литературу" });
 
 dev_rus.projects.push({
     name: "Личный сайт Сергея Агасарян",
     source: "https://github.com/ionyanov/php_serguius.ru.git",
-    link: "http://serguius.ru/",
+    link: "https://serguius.onyanov.net/",
     description: ["Разработан в 2004 на статичном HTML, Позднее переписан на PHP с использованием готовых библиотек phpSecurityAdmin и phpMysqlConnection.",
         "База данных на MySQL.",
         "Дизайн предоставлен заказчиком.",
@@ -265,4 +265,16 @@ dev_rus.projects.push({
         "Backend: Nest.js + Multer + Prisma + MYSQL"],
 })
 
+dev_rus.projects.push({
+    name: "Личный сайт Сергея Агасарян 2.0",
+    source: "https://github.com/ionyanov/serguius.ru",
+    link: "https://serguius.ru/",
+    description: ["Позволяет вести каталог картин.",
+        "Я решил разделить панель администрирования и основной фронт из соображений производительности. " +
+        "Для основного фронта используется Next со статически генерируемыми страницами. " +
+        "В панели администрирования реализована кнопка для запуска процесса компиляции и публикации основного фронта.",
+        "Admin panel: Vite + React + TypeScript + Material UI + RTK Query",
+        "Backend: Nest.js + Multer + Sharp + Prisma + MYSQL",
+        "Frontend: React + Typescript + Next.JS"],
+})
 export default dev_rus;

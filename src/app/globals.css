@@ -256,6 +256,16 @@ nav img {
   height: 22px;
 }
 
+.collapsible {
+  background-color: var(--font-darc);
+  color: var(--font-light);
+  border: 0;
+}
+
+.hidden {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   [class*="cvTitle"] {
@@ -275,7 +285,12 @@ nav img {
 }
 
 @media print {
-  .buttons {
+  .buttons,
+  .collapsible {
     display: none;
+  }
+
+  .hidden {
+    display: block;
   }
 }
