@@ -181,7 +181,7 @@ data_enu.languages.push({ name: "English", level: "B1" });
 data_enu.projects.push({
     name: "Personal site Sergey Agasaryan",
     source: "https://github.com/ionyanov/php_serguius.ru.git",
-    link: "https://serguius.onyanov.net/",
+    link: "https://old.serguius.ru/",
     description: ["Developed in 2004 with use static HTML, later rewritten to PHP using phpSecurityAdmin and phpMysqlConnection libraries.",
         "Database: MySQL.",
         "Design by customer.",
@@ -242,7 +242,7 @@ data_enu.projects.push({
     link: "https://serguius.ru/",
     description: ["Allows to maintain a catalog of pictures.",
         "I deside to do separete admin pannel and main frontend for perfomance reason. " +
-        "In main frontend I use Next with static pages. " +
+        "In main frontend I use Next SSG. " +
         "In admin pannel I developed button wtich call script for build and deploy Frontend project.",
         "Admin panel: Vite + React + TypeScript + Material UI + RTK Query",
         "Backend: Nest.js + Multer + Sharp + Prisma + MYSQL",

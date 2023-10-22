@@ -209,7 +209,7 @@ dev_rus.languages.push({ name: "Английский", level: "читаю про
 dev_rus.projects.push({
     name: "Личный сайт Сергея Агасарян",
     source: "https://github.com/ionyanov/php_serguius.ru.git",
-    link: "https://serguius.onyanov.net/",
+    link: "https://old.serguius.ru/",
     description: ["Разработан в 2004 на статичном HTML, Позднее переписан на PHP с использованием готовых библиотек phpSecurityAdmin и phpMysqlConnection.",
         "База данных на MySQL.",
         "Дизайн предоставлен заказчиком.",
@@ -271,7 +271,7 @@ dev_rus.projects.push({
     link: "https://serguius.ru/",
     description: ["Позволяет вести каталог картин.",
         "Я решил разделить панель администрирования и основной фронт из соображений производительности. " +
-        "Для основного фронта используется Next со статически генерируемыми страницами. " +
+        "Для основного фронта используется Next со статически генерируемыми страницами (SSG). " +
         "В панели администрирования реализована кнопка для запуска процесса компиляции и публикации основного фронта.",
         "Admin panel: Vite + React + TypeScript + Material UI + RTK Query",
         "Backend: Nest.js + Multer + Sharp + Prisma + MYSQL",
